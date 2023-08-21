@@ -8,6 +8,8 @@
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
   background-color: #000033;
+
+  width: 100%;
 }
 html {
   scroll-behavior: smooth;
