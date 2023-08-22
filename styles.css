@@ -207,6 +207,9 @@ html {
 }
 
 .project-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #0075f6;
   font-size: 40px;
 }
@@ -308,7 +311,7 @@ html {
 @media only screen and (max-width: 400px) {
   .hero-details-container,
   .image-container {
-    padding: 20px;
+    padding: 50px;
   }
   .hero-box {
     border-radius: 30px;
@@ -319,6 +322,7 @@ html {
 
   .about-container {
     background-color: #000033;
+    padding: 5px;
   }
   .about-box {
     border-radius: 30px;
@@ -345,15 +349,12 @@ html {
     background: linear-gradient(145deg, #00002e, #000037);
     box-shadow: 26px 26px 52px #000023, -26px -26px 52px #000043;
     margin: 2em;
-    padding: 1.5em;
+    padding: 2em;
   }
 
   .project-title,
   .project-content {
-    border-radius: 30px;
-    background: linear-gradient(145deg, #00002e, #000037);
-    box-shadow: 26px 26px 52px #000023, -26px -26px 52px #000043;
-    margin: 2em;
+    padding: 50px;
   }
 
   .contact-container {
