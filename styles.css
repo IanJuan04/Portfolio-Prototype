@@ -6,10 +6,10 @@
 }
 
 body {
-  position: absolute;
+  position: relative;
   font-family: Arial, Helvetica, sans-serif;
   background-color: #000033;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 html {
   scroll-behavior: smooth;
@@ -23,7 +23,7 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -56,12 +56,8 @@ html {
 /* Start of Hero */
 
 .hero-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background-color: #000033;
-  gap: 2em;
+
   margin-top: 1em;
   max-width: 100%;
 }
@@ -77,37 +73,56 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px;
 }
 
 .hero-details-container {
   text-align: center;
-  padding: 50px;
 }
 
 .hero-name {
-  font-size: 80px;
+  font-size: 50px;
   color: #0075f6;
 }
 .hero-details {
   color: #fff;
-  font-size: 50px;
+  font-size: 30px;
+  text-align: center;
+  padding: 2em;
 }
 .main-img {
+  padding: 2em;
   width: 100%;
-  max-width: 800px;
+  max-width: 500px;
 }
 
 .quote-container {
-  width: 90%;
-  color: #fff;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.quote-box {
+  width: 100%;
+  display: block;
   text-align: center;
+  width: 90%;
+  border-radius: 30px;
+  padding: 50px;
   background-image: url(images/background2.png);
-  padding: 2em;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  margin: 2em;
+}
+
+.quote,
+.quote-author {
+  font-style: italic;
+  color: #fff;
+}
+.quote {
+  font-size: 30px;
+}
+
+.quote-author {
+  font-size: 20px;
 }
 /* End of Hero */
 
@@ -139,8 +154,8 @@ html {
 .about-title {
   color: #0075f6;
   text-align: center;
-  font-size: 40px;
-  padding: 1em 0;
+  font-size: 30px;
+  padding-top: 50px;
 }
 
 .about-content {
@@ -150,6 +165,7 @@ html {
 
 .about-img {
   width: 100%;
+  max-width: 400px;
   padding: 2em;
 }
 /* End of About */
@@ -168,7 +184,6 @@ html {
   border-radius: 30px;
   background: linear-gradient(145deg, #00002e, #000037);
   box-shadow: 26px 26px 52px #000023, -26px -26px 52px #000043;
-  margin: 2em;
 }
 
 .skill-title {
@@ -176,9 +191,10 @@ html {
   justify-content: center;
   align-items: center;
   color: #0075f6;
-  font-size: 40px;
+  font-size: 50px;
   margin-top: 1em;
-  padding: 30px;
+  padding: 20px;
+  text-align: center;
 }
 
 .skill-img {
@@ -244,7 +260,7 @@ html {
   border-radius: 30px;
   background: linear-gradient(145deg, #00002e, #000037);
   box-shadow: 26px 26px 52px #000023, -26px -26px 52px #000043;
-  margin: 2em;
+  /* margin: 2em; */
 }
 
 .project-title {
@@ -252,7 +268,7 @@ html {
   justify-content: center;
   align-items: center;
   color: #0075f6;
-  font-size: 40px;
+  font-size: 30px;
   padding: 50px;
 }
 
@@ -314,7 +330,7 @@ html {
 }
 
 .contact-box {
-  width: 80%;
+  width: 90%;
   border-radius: 30px;
 
   background: linear-gradient(145deg, #e6e6e6, #ffffff);
@@ -337,7 +353,7 @@ html {
   justify-content: center;
   align-items: center;
   padding: 20px 0;
-  font-size: 40px;
+  font-size: 30px;
   color: #0075f6;
 }
 
@@ -364,6 +380,16 @@ html {
 .contact-icons p {
   display: none;
 }
+
+#name,
+#e-mail,
+#message {
+  width: 100%;
+  border-radius: 5px;
+  font-size: 15px;
+  padding: 5px;
+  background-color: rgb(255, 254, 254);
+}
 /* End of Contact */
 
 /* Start of Footer */
@@ -381,22 +407,33 @@ html {
 
 /* End of Footer */
 
-@media only screen and (min-width: 401px) and (max-width: 960px) {
+@media only screen and (min-width: 600px) and (max-width: 780px) {
   .header-container {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
   }
-  .hero-details-container,
-  .image-container {
-    padding: 20px;
+
+  .hero-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+
   .hero-box {
-    padding: 5em;
-    border-radius: 30px;
-    background: linear-gradient(145deg, #00002e, #000037);
-    box-shadow: 26px 26px 52px #000023, -26px -26px 52px #000043;
-    margin: 2em;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5em;
+  }
+
+  .hero-details {
+    font-size: 40px;
+  }
+
+  .hero-name {
+    font-size: 60px;
   }
 
   .main-img {
@@ -412,6 +449,9 @@ html {
   .about-box {
     border-radius: 30px;
   }
+  .about-title {
+    font-size: 40px;
+  }
   .skill-box {
     border-radius: 30px;
   }
@@ -421,9 +461,8 @@ html {
     flex-wrap: wrap;
   }
 
-  .skill-title,
-  .skill-img {
-    padding: 85px;
+  .skill-title {
+    font-size: 40px;
   }
 
   .project-content {
@@ -432,6 +471,19 @@ html {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+  }
+
+  .project-box {
+    width: 90%;
+  }
+
+  .project-title {
+    font-size: 40px;
+  }
+
+  .contact-title {
+    font-size: 40px;
+    text-align: center;
   }
 
   .form input[type="text"] {
@@ -453,5 +505,161 @@ html {
     margin-bottom: 10px;
     padding: 7px;
     resize: none;
+  }
+  #name,
+  #e-mail,
+  #message {
+    width: 100%;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px;
+    background-color: rgb(255, 254, 254);
+  }
+}
+
+@media only screen and (min-width: 781px) {
+  .header-container {
+    flex-direction: row;
+  }
+
+  .hero-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-box {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5em;
+  }
+  .hero-details {
+    text-align: left;
+    font-size: 50px;
+  }
+
+  .hero-name {
+    font-size: 80px;
+  }
+
+  .image-container {
+    width: 90%;
+    padding: 4em 4em;
+  }
+
+  .about-box {
+    width: 90%;
+  }
+
+  .about-content {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .about-title {
+    font-size: 50px;
+  }
+  .about-details {
+    font: 24px;
+    width: 75%;
+    padding: 0 3em;
+    text-align: justify;
+  }
+
+  .about-img {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .skill-box {
+    width: 90%;
+  }
+
+  .skill-title {
+    font-size: 50px;
+  }
+
+  .skill-img {
+    flex-direction: row;
+    gap: 4em;
+    padding-bottom: 6em;
+  }
+
+  .project-box {
+    width: 96.5%;
+  }
+
+  .project-title {
+    font-size: 50px;
+  }
+
+  .project-content {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3em 5em 5em 5em;
+  }
+
+  .contact-content {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .contact-title {
+    font-size: 50px;
+  }
+
+  .contact-icons {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .contact-icons li {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+  }
+
+  .contact-icons li p {
+    display: block;
+    font-size: 20px;
+  }
+
+  .form {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form input[type="text"] {
+    background-color: #ffffff;
+    border: 1px solid #d6d9dc;
+    border-radius: 3px;
+
+    padding: 7px;
+    font-size: 14px;
+  }
+
+  .form textarea {
+    font-size: 14px;
+
+    border: 1px solid #d6d9dc;
+    border-radius: 3px;
+
+    min-height: 200px;
+    margin-bottom: 10px;
+    padding: 7px;
+    resize: none;
+  }
+
+  #name,
+  #e-mail,
+  #message {
+    width: 100%;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px;
+    background-color: rgb(255, 254, 254);
   }
 }
